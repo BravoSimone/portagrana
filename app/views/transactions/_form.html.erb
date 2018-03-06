@@ -11,6 +11,21 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :reason %>
+    <%= form.text_field :reason, id: :transaction_reason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :transaction_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :transaction_price %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
