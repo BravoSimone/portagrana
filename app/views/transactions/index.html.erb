@@ -16,7 +16,7 @@
     <% @transactions.each do |transaction| %>
       <tr>
         <td><%= transaction.reason %></td>
-        <td><%= transaction.description %></td>
+        <td><%= transaction.short_description %></td>
         <td class="price"><%= '%.2f' % transaction.price %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
