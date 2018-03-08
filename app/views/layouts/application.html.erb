@@ -3,6 +3,7 @@
   <head>
     <title>Portagrana</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -10,9 +11,15 @@
 
   <body>
     <% if user_signed_in? %>
-      <%= link_to('logout', destroy_user_session_path, method: :delete) %>
-    <% else %>
-      <%= link_to('login', new_user_session_path) %>
+      <div class="header">
+        <span class="header-content">
+          <%= link_to('home', transactions_path, class: 'button reversed') %>
+          <%= link_to('stats', stats_path, class: 'button reversed') %>
+          <%= link_to('logout', destroy_user_session_path,
+                                method: :delete,
+                                class: 'button red reversed') %>
+        </span>
+      </div>
     <% end %>
     <%= yield %>
   </body>

@@ -18,12 +18,14 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :transaction_description %>
+    <%= form.text_area :description, id: :transaction_description, rows: 4 %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :transaction_price %>
+    <%= form.text_field :price, id: :transaction_price,
+                                type: :number,
+                                step: 0.01 %>
   </div>
 
   <div class="actions">

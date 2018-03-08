@@ -18,9 +18,9 @@
         <td><%= transaction.reason %></td>
         <td><%= transaction.short_description %></td>
         <td class="price"><%= '%.2f' % transaction.price %></td>
-        <td><%= link_to 'Show', transaction %></td>
-        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '📊', transaction %></td>
+        <td><%= link_to '✏️', edit_transaction_path(transaction) %></td>
+        <td><%= link_to '❌', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Transaction', new_transaction_path %>
+<%= link_to 'New Transaction', new_transaction_path, class: 'button reversed'%>

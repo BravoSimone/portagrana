@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  margin-top: 50px;
+}
+
+.header-content {
+  position: absolute;
+  display: inline-flex;
+  right: 0px;
+  bottom: 0px
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 8px 13px;
+  text-decoration: none;
+  margin: 2px;
+
+  &.reversed{
+    border: 2px solid black;
+    padding: 6px 11px;
+    color: black;
+    background-color: white;
+  }
+
+  &.red{
+    background-color: darkred;
+
+    &.reversed{
+      border-color: darkred;
+      color: darkred;
+      background-color: white;
+    }
+  }
+}
